@@ -1,0 +1,78 @@
+.main {
+  overflow: hidden;
+  padding: 140px 0 140px;
+  button:hover{
+    background-color: white;
+    color: red;
+  }
+  &__container {
+    // display: flex;
+    row-gap: 35px;
+    display: grid;
+    grid-template-columns: 500px auto;
+    // justify-content: space-between;
+    align-items: center;
+    .img {
+      justify-self: center;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+    // max-width: 500px;
+    p {
+      font-family: "Heebo";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #21243d;
+    }
+  }
+  &__header {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: 700;
+    font-size: toRem(44);
+    line-height: toRem(60);
+    color: #21243d;
+  }
+  button {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: 500;
+    background: #ff6464;
+    border-radius: 2px;
+    color: #ffffff;
+    border: none;
+    padding: 9px 20px;
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+.section__top {
+  a {
+    font-weight: 400;
+  }
+  font-family: "Heebo";
+  font-style: normal;
+  font-size: 1.375rem;
+  line-height: 3.75rem;
+  color: #21243d;
+}
+
+@media (max-width: 850px) {
+  .main {
+    &__container {
+      grid-template-columns: auto;
+      text-align: center;
+    }
+    &__text {
+      order: 2;
+      align-items: center;
+      justify-self: center;
+    }
+  }
+}

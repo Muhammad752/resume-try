@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Resume</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <input style="display: none" type="checkbox" name="" id="bg-menu" />
+
+        <nav class="navbar">
+          <li class="navbar-item"><a href="./blog.html">Blog</a></li>
+          <li class="navbar-item"><a href="./worl.html">Works</a></li>
+          <li class="navbar-item active">
+            <a href="./contacts.html">Contact</a>
+          </li>
+        </nav>
+        <label class="bg-menu" for="bg-menu">
+          <span class="nav-line"></span>
+          <span class="nav-line"></span>
+          <span class="nav-line"></span>
+        </label>
+      </div>
+    </header>
+    <main>
+      <section class="main">
+        <div class="container main__container">
+          <div class="main__text">
+            <h1 class="main__header">Hi, I am John, Creative Technologist</h1>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+            <button>Download Resume</button>
+          </div>
+          <div class="img">
+            <img
+              class="author main__img"
+              src="./assets/imgs/Ellipse 1.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="recent">
+        <div class="container">
+          <p class="recent__top section__top d-flex justify-content-between">
+            <a href="#">Recent posts</a>
+            <a class="colored" href="#">View all</a>
+          </p>
+          <div class="posts d-flex justify-content-between row">
+            <div class="post col-md-5">
+              <h3>Making a design system from scratch</h3>
+              <div class="datatitle">
+                <span>12 Feb 2020</span><span class="hr"></span
+                ><span>Design, Pattern</span>
+              </div>
+              <div>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+            <div class="post col-md-5">
+              <h3>Creating pixel perfect icons in Figma</h3>
+              <div class="datatitle">
+                <span>12 Feb 2020</span><span class="hr"></span
+                ><span>Figma, Icon Design</span>
+              </div>
+              <div>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="works">
+        <div class="container">
+          <p class="works__top section__top">Featured works</p>
+
+          <div class="card2__container">
+            <div class="card2 works__card">
+              <div class="card2__img">
+                <img src="./assets/imgs/works1.png" alt="" />
+              </div>
+              <div class="card2__text">
+                <h3>Designing Dashboards</h3>
+                <div class="job">
+                  <p class="date">2020</p>
+                  <p class="type">Dashboard</p>
+                </div>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+            <div class="card2 works__card">
+              <div class="card2__img">
+                <img src="./assets/imgs/works2.png" alt="" />
+              </div>
+              <div class="card2__text">
+                <h3>Vibrant Portraits of 2020</h3>
+                <div class="job">
+                  <p class="date">2018</p>
+                  <p class="type">Illustration</p>
+                </div>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+            <div class="card2 works__card">
+              <div class="card2__img">
+                <img src="./assets/imgs/works3.png" alt="" />
+              </div>
+              <div class="card2__text">
+                <h3>36 Days of Malayalam type</h3>
+                <div class="job">
+                  <p class="date">2018</p>
+                  <p class="type">Typography</p>
+                </div>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="social">
+          <a href="#">
+            <img src="/assets/imgs/facebook.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="./assets/imgs/insta.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="./assets/imgs/twitter.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="./assets/imgs/Linkedin.png" alt="" />
+          </a>
+        </div>
+        <div class="bottom-line d-flex flex-wrap justify-content-center">
+          <p>Copyright ©2020</p>
+          <p>All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./bootstrap/bootstrap.js"></script>
+    <script src="./assets/js.js"></script>
+  </body>
+</html>

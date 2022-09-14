@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+
+.bg-menu {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  padding-top: 27px;
+  flex-direction: column;
+  gap: 5px;
+  width: 48px;
+  .nav-line {
+    transition: 2s;
+    width: 100%;
+    border-radius: 0px 40px;
+    height: 10px;
+    background-color: #000000;
+  }
+}
+
+@mixin text() {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+}
+
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@media (max-width: 370px) {
+  :root {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,16 @@
+.footer{
+    padding: 53px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .social{
+            display: flex;
+            justify-content: center;
+            gap: 2.1875rem;
+        }
+        .bottom-line{
+            gap: 5px;
+        }
+    }
+}

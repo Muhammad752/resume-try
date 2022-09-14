@@ -1,0 +1,569 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 370px) {
+  :root {
+    font-size: 11px;
+  }
+}
+.header__container {
+  display: flex;
+  justify-content: end;
+}
+.header .active {
+  color: #ff6464;
+}
+
+.navbar {
+  z-index: 2;
+  position: fixed;
+  justify-content: flex-end;
+  gap: 33px;
+  padding: 0;
+  padding-top: 27px;
+}
+.navbar-item {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  text-align: right;
+  color: #000000;
+  font-size: 20px;
+  line-height: 29px;
+}
+.navbar .active {
+  color: #ff6464;
+}
+
+.header__container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.bg-menu {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  padding-top: 27px;
+  flex-direction: column;
+  gap: 5px;
+  width: 48px;
+}
+.bg-menu .nav-line {
+  transition: 2s;
+  width: 100%;
+  border-radius: 0px 40px;
+  height: 10px;
+  background-color: #000000;
+}
+
+input#bg-menu:checked ~ .bg-menu {
+  position: fixed;
+}
+input#bg-menu:checked ~ .bg-menu span {
+  background-color: white;
+  transition: 15s;
+}
+input#bg-menu:checked ~ .bg-menu span:first-child {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg);
+  transition: 1s;
+}
+input#bg-menu:checked ~ .bg-menu span:nth-child(2) {
+  transform: scaleY(0);
+  transition: 0.2s;
+}
+input#bg-menu:checked ~ .bg-menu span:last-child {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg);
+  transition: 1s;
+}
+
+@media (max-width: 850px) {
+  .bg-menu {
+    display: flex;
+  }
+  .navbar {
+    transform-origin: 100% 0%;
+    transform: rotate(-90deg);
+    height: fit-content;
+    transition: 0.5s;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 150px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    border-radius: 70% 0 0 50%;
+    background-color: rgba(255, 100, 100, 0.8235294118);
+    flex-direction: column;
+  }
+  .navbar a {
+    color: white;
+  }
+  .navbar a:hover {
+    transform: scale(1.5, 1.5);
+  }
+  input#bg-menu:checked ~ .navbar {
+    top: 0;
+    right: 0;
+    transform: rotate(0);
+  }
+}
+.main {
+  overflow: hidden;
+  padding: 140px 0 140px;
+}
+.main button:hover {
+  background-color: white;
+  color: red;
+}
+.main__container {
+  row-gap: 35px;
+  display: grid;
+  grid-template-columns: 500px auto;
+  align-items: center;
+}
+.main__container .img {
+  justify-self: center;
+}
+.main__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+.main__text p {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
+}
+.main__header {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 3.75rem;
+  color: #21243d;
+}
+.main button {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  background: #ff6464;
+  border-radius: 2px;
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.section__top {
+  font-family: "Heebo";
+  font-style: normal;
+  font-size: 1.375rem;
+  line-height: 3.75rem;
+  color: #21243d;
+}
+.section__top a {
+  font-weight: 400;
+}
+
+@media (max-width: 850px) {
+  .main__container {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  .main__text {
+    order: 2;
+    align-items: center;
+    justify-self: center;
+  }
+}
+.recent {
+  background: #edf7fa;
+  padding-bottom: 35px;
+}
+
+.posts {
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.posts .post {
+  flex-shrink: 0;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+  border-radius: 4px;
+  padding: 24px;
+}
+.posts .post h3 {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #21243d;
+}
+.posts .post p {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
+}
+.posts .post .datatitle {
+  display: flex;
+  align-items: center;
+  padding: 12px 0 19px;
+  gap: 24px;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
+}
+.posts .post .datatitle .hr {
+  background-color: black;
+  display: block;
+  width: 1px;
+  height: 16px;
+}
+
+.colored {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: right;
+  /* Secondry */
+  color: #00a8cc;
+}
+
+.works {
+  padding-bottom: 83px;
+}
+.works__header {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  color: #21243d;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.works__full .card2__container > div:not(:first-child) {
+  display: grid;
+}
+
+.dashboards .website img {
+  width: 100%;
+}
+
+.card2 {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 18px;
+}
+.card2 .cover {
+  z-index: 12;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card2 img {
+  height: 100%;
+  object-fit: cover;
+}
+.card2__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.card2 .job {
+  display: flex;
+  gap: 26px;
+}
+.card2 .job .date {
+  padding: 0 10px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: unset;
+  color: #ffffff;
+  background: #142850;
+  border-radius: 16px;
+}
+.card2 .job p {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  /* Light */
+  color: #8695a4;
+}
+.card2__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card2__text p {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
+}
+
+@media (max-width: 1000px) {
+  .card2 img {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .card2 {
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 500px) {
+  .card2 {
+    grid-template-columns: auto;
+  }
+  .card2__container > div:not(:first-child) {
+    display: none;
+  }
+}
+.footer {
+  padding: 53px;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer .container .social {
+  display: flex;
+  justify-content: center;
+  gap: 2.1875rem;
+}
+.footer .container .bottom-line {
+  gap: 5px;
+}
+
+.blog {
+  padding: 54px 0;
+}
+.blog__header {
+  padding: 54px 0 20px;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 60px;
+  color: #21243d;
+}
+.blog .bcard {
+  padding: 30px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.blog .bcard__header {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  color: #21243d;
+}
+.blog .bcard__text {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
+}
+.blog .bcard .log {
+  padding: 2px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.blog .bcard .log .theme {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #8695a4;
+}
+.blog .bcard .log__date {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #21243d;
+}
+.blog .bcard__line {
+  display: block;
+  background-color: #21243d;
+  width: 1px;
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .blog {
+    padding: 20px 0;
+  }
+  .blog__header {
+    padding: 0;
+    font-size: 44px;
+    line-height: 60px;
+  }
+  .blog .bcard {
+    padding: 18px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .blog .bcard__header {
+    line-height: 38px;
+    font-size: 26px;
+  }
+  .blog .bcard__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blog .bcard .log {
+    padding: 2px 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .blog .bcard .log .theme {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blog .bcard .log__date {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blog .bcard__line {
+    display: block;
+    background-color: #21243d;
+    width: 1px;
+    height: 16px;
+  }
+}
+.dashboards__header {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  color: #21243d;
+  padding-top: 100px;
+}
+.dashboards .heading1 {
+  margin-top: 20px;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 60px;
+  color: #21243d;
+}
+.dashboards .heading2 {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 60px;
+  /* or 250% */
+  /* Dark Color */
+  color: #21243d;
+}
+.dashboards .website {
+  padding-bottom: 30px;
+}
+
+.dashboard__subtitle {
+  align-items: center;
+  margin-bottom: 23px;
+  gap: 17px;
+}
+.dashboard__subtitle .year {
+  padding: 2px 4px;
+  background: #ff7c7c;
+  border-radius: 16px;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.dashboard__subtitle p {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  /* Dark Color */
+  color: #21243d;
+}
+.dashboard__text {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
